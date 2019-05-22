@@ -6,6 +6,7 @@
   padding:0;
   margin:0;
   box-sizing:border-box;
+  text-decoration:none;
 }
 .close-head{
   box-shadow:none;
@@ -141,10 +142,65 @@
 .amo ion-col{
   padding:4px 8px;
 }
+.amo>.time{
+  font-size:13px;
+  color:#979dab;
+  text-align:right;
+}
+.amo>.time>span{
+  margin:0 4px;
+}
 .amo ion-col span{
   color:#fff;
   background-color:black;
+  padding:0 2px;
 }
 .amo>ul{
-  
+  width:100%;
+  height:120px;
+  list-style:none;
+  display:-webkit-box;
+  overflow-x:scroll;
+  -webkit-overflow-scrolling: touch;
 }
+.amo>ul>li{
+  width:128px;
+  height:100%;
+}
+.amo>ul>li>a{
+  width:100%;
+  height:100%;
+  border:1px solid red;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.amo>ul>li>a>p{
+  color:#fe4979;
+  font-size:12px;
+}
+.amo>ul>li>a>span{
+  color:#979dab;
+  font-size:14px;
+}
+.amo>ul>li>a>span>.active{
+  display:none;
+}
+.amo>ul>li>a>p>.active{
+  display:none;
+}
+.amo>ul>li>a:last-child{
+  border:1px solid #E8EAEE;
+}
+.amo>ul>li>a>.active{
+  display:none;
+}
+.amo>ul>.active{
+  display:none;
+}
+.amo>ul>li ion-img{
+  width:80%;
+  height:80px;
+}
+
