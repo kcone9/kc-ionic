@@ -9,19 +9,20 @@ import {HttpClient} from "@angular/common/http"
 export class Tab1Page {
   constructor(private http:HttpClient){}
   user="kcone"
-  scroll1 = []
+  scroll = []
    h:any="2"
    m:any="0";
    s:any="0"
   time=null
   ngOnInit(){
-    this.http.get("http://127.0.0.1:5050/ionic/scroll1").subscribe((res:any)=>{
+    this.http.get("http://127.0.0.1:5050/ionic/scroll").subscribe((res:any)=>{
       var row=res.reg
+      console.log(row)
     for(var i of row){
       i.more=false
     }
     row.push({price:"MORE",offer:"查看更多",more:true})
-    this.scroll1=row
+    this.scroll=row
     })
     this.time=setInterval(()=>{
       this.s=parseInt(this.s)

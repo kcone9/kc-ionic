@@ -48,10 +48,14 @@
 .class>div{
     height:100%;
 }
+.class>.active{
+  display:none;
+}
 .class>div:first-child{
     width:26%;
     height:100%;
     overflow-y:scroll;
+    border-right:1px solid #e5e8ed;
 }
 .class>div:first-child>div{
     height:50px;
@@ -62,27 +66,27 @@
     color:#757C8E;
     font-size:14px;
 }
-.class>div:last-child{
+.class>.last{
     width:74%;
     padding-top:5%;
     padding-left:5%;
     padding-right:5%;
     overflow-y:scroll;
 }
-.class>div:last-child>p{
+.class>.last>p{
     margin-top:5%;
     margin-bottom:5%;
     font-size:14px;
     color:#757c8e;
 }
-.class>div:last-child>ul{
+.class>.last>ul{
     width:100%;
     border-bottom:1px solid #e5e8ed;
     list-style:none;
     display:flex;
     flex-wrap:wrap;
 }
-.class>div:last-child>ul>li{
+.class>.last>ul>li{
     width:33.33%;
     height:120px;
     display:flex;
@@ -90,11 +94,11 @@
     justify-content:center;
     align-items:center;
 }
-.class>div:last-child>ul>li ion-img{
+.class>.last>ul>li ion-img{
     width:80%;
     height:50%;
 }
-.class>div:last-child>ul>li>span{
+.class>.last>ul>li>span{
     font-size:12px;
     margin-top:4px;
     color:rgba(37, 50, 78, .8);

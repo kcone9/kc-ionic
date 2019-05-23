@@ -115,8 +115,8 @@
     </ion-row>
     <ion-row class="amo">
       <ul>
-        <li *ngFor="let p of scroll1;let i=idx"><a href="">
-            <ion-img [src]="p.scr" [class.active]="p.more"></ion-img>
+        <li *ngFor="let p of scroll;let i=idx"><a href="">
+            <ion-img [src]="p.src" [class.active]="p.more"></ion-img>
             <p><span [class.active]="p.more">¥</span>{{p.price}}</p><span><span
                 [class.active]="p.more">¥</span>{{p.offer}}</span>
             <div></div>
