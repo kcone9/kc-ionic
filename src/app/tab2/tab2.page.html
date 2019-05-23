@@ -1,9 +1,41 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="close-head">
+  <div>
+    <ion-icon name="search" class="myicon" style="color:#fff;"></ion-icon>
+    <ion-input></ion-input>
+  </div>
+  <div>
+    <ion-icon name="cart" style="color:#fff"></ion-icon>
+  </div>
 </ion-header>
+<ion-content>
+  <div class="class">
+    <div>
+      <div *ngFor="let item of list">{{item.name}}</div>
+    </div>
+    <div>
+      <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/06/33/j6gHAFzjxc6AdDpiAACe1OUnAaY900.jpg"></ion-img>
+      <p>数码畅销榜</p>
+      <ul>
+        <li *ngFor="let item of list1">
+          <ion-img [src]="item.src"></ion-img>
+          <span>{{item.logo}}</span>
+        </li>
+      </ul>
+      <p>更多品牌</p>
+      <ul>
+          <li *ngFor="let item of list2">
+            <ion-img [src]="item.src"></ion-img>
+            <span>{{item.logo}}</span>
+          </li>
+        </ul>
+      <p>便民生活</p>
+      <ul>
+          <li *ngFor="let item of list3">
+            <ion-img [src]="item.src"></ion-img>
+            <span>{{item.logo}}</span>
+          </li>
+        </ul>
+    </div>
+  </div>
 
-<ion-content></ion-content>
+</ion-content>

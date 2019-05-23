@@ -1,1 +1,106 @@
-
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration:none;
+  }
+  .close-head{
+    box-shadow:none;
+    height:44px;
+    padding:4px 10px;
+    border:0;
+    display:flex;
+    align-items:center;
+    background-image:url(https://cimgs1.fenqile.com/ibanner2/M00/38/82/jagHAFzZUliAEZDmAAAWaPqwYKk341_750x184.jpg);
+    box-sizing:border-box;
+  }
+  .close-head>div:first-child{
+    width:90%;
+    height:98%;
+    background-color:rgba(187, 193, 252, 0.1);
+    display:flex;
+    align-items:center;
+  }
+  .close-head>div:first-child>ion-input input{
+    border-radius:4px;
+    padding-left:6px;
+  }
+  .close-head>div:last-child{
+    width:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .close-head>div:last-child>span{
+    color:#fff;
+  }
+  .close-head>div>ion-icon{
+    width:40px;
+    height:36px;
+    box-sizing:border-box;
+    margin:0;
+  }
+  .class{
+      display:flex;
+      width:100%;
+      height:100%;
+  }
+.class>div{
+    height:100%;
+}
+.class>div:first-child{
+    width:26%;
+    height:100%;
+    overflow-y:scroll;
+}
+.class>div:first-child>div{
+    height:50px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#757C8E;
+    font-size:14px;
+}
+.class>div:last-child{
+    width:74%;
+    padding-top:5%;
+    padding-left:5%;
+    padding-right:5%;
+    overflow-y:scroll;
+}
+.class>div:last-child>p{
+    margin-top:5%;
+    margin-bottom:5%;
+    font-size:14px;
+    color:#757c8e;
+}
+.class>div:last-child>ul{
+    width:100%;
+    border-bottom:1px solid #e5e8ed;
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+}
+.class>div:last-child>ul>li{
+    width:33.33%;
+    height:120px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.class>div:last-child>ul>li ion-img{
+    width:80%;
+    height:50%;
+}
+.class>div:last-child>ul>li>span{
+    font-size:12px;
+    margin-top:4px;
+    color:rgba(37, 50, 78, .8);
+    lines: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}
