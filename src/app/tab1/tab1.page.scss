@@ -18,6 +18,10 @@
   background-image:url(https://cimgs1.fenqile.com/ibanner2/M00/38/82/jagHAFzZUliAEZDmAAAWaPqwYKk341_750x184.jpg);
   box-sizing:border-box;
 }
+.close-head::after{
+  box-shadow:none;
+  display:none;
+}
 .close-head>div:first-child{
   width:90%;
   height:98%;
