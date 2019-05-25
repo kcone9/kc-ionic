@@ -10,27 +10,27 @@
 <ion-content>
   <div class="class">
     <div>
-      <div *ngFor="let item of list;let i=index" (click)="swit(i)">{{item.name}}</div>
+      <div [class.change]="power[i].change" *ngFor="let item of list;let i=index" (click)="swit(i)">{{item.name}}</div>
     </div>
     <div class="last" [class.active]="power[0].sate" >
       <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/06/33/j6gHAFzjxc6AdDpiAACe1OUnAaY900.jpg"></ion-img>
       <p>数码畅销榜</p>
       <ul>
-        <li *ngFor="let item of list1">
+        <li *ngFor="let item of list1.a1">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>
       </ul>
       <p>更多品牌</p>
       <ul>
-          <li *ngFor="let item of list2">
+          <li *ngFor="let item of list1.a2">
             <ion-img [src]="item.src"></ion-img>
             <span>{{item.logo}}</span>
           </li>
         </ul>
       <p>便民生活</p>
       <ul>
-          <li *ngFor="let item of list3">
+          <li *ngFor="let item of list1.a3">
             <ion-img [src]="item.src"></ion-img>
             <span>{{item.logo}}</span>
           </li>
@@ -40,7 +40,7 @@
       <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/38/83/jagHAFzaW6qAciz1AACI564TUHE163.jpg"></ion-img>
       <p>精选品牌</p>
       <ul>
-        <li *ngFor="let item of phone">
+        <li *ngFor="let item of list2.a1">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>
@@ -50,21 +50,21 @@
       <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/06/30/j6gHAFziu1yAZwb0AACk_m5nWZ0462.png"></ion-img>
       <p>精选分类</p>
       <ul>
-        <li *ngFor="let item of phone">
+        <li *ngFor="let item of list3.a1">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>
       </ul>
       <p>热卖大牌</p>
       <ul>
-        <li *ngFor="let item of phone">
+        <li *ngFor="let item of list3.a2">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>
       </ul>
       <p>其他分类</p>
       <ul>
-        <li *ngFor="let item of phone">
+        <li *ngFor="let item of list3.a3">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>
@@ -74,7 +74,7 @@
       <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/37/75/jqgHAFyrdZiAfdl9AAB7anusNMg916.jpg"></ion-img>
       <p>充值中心</p>
       <ul>
-        <li *ngFor="let item of card">
+        <li *ngFor="let item of list4.a1">
           <ion-img [src]="item.src"></ion-img>
           <span>{{item.logo}}</span>
         </li>

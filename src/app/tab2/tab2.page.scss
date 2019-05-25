@@ -3,7 +3,32 @@
     margin:0;
     box-sizing:border-box;
     text-decoration:none;
+    
   }
+  // body,html{
+  //   overflow-x:hidden;
+  //   overflow-y:hidden;
+  // }
+  // ::webkit-scrollbar{
+  //   width:0;
+  //   height:0;
+  // }
+  ::-webkit-scrollbar 
+{ 
+    width: 0; 
+    height: 0; 
+    background-color: transparent; 
+} 
+
+::-webkit-scrollbar-track 
+{ 
+    background-color: transparent; 
+} 
+
+::-webkit-scrollbar-thumb 
+{ 
+    background-color: transparent; 
+}
   .close-head{
     box-shadow:none;
     height:44px;
@@ -56,6 +81,10 @@
     height:100%;
     overflow-y:scroll;
     border-right:1px solid #e5e8ed;
+}
+.class>div:first-child>.change{
+  border-left:4px solid #3B9BFF;
+  color:#3B9BFF;
 }
 .class>div:first-child>div{
     height:50px;

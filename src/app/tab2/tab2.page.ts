@@ -11,19 +11,20 @@ export class Tab2Page {
   list1=[]
   list2=[]
   list3=[]
-  phone=[]
-  card=[]
+  list4=[]
   power=[]
   swit(i){
-    console.log(i)
     for(var r of this.power){
       r.sate=true
+      r.change=false
     }
     this.power[i].sate=false
+    this.power[i].change=true
   }
   ngOnInit() {
-    for(var i=0;i<20;i++){
-      this.power.push({sate:true})
+    this.power.push({sate:false,change:true})
+    for(var i=1;i<20;i++){
+      this.power.push({sate:true,change:false})
     }
     this.http.get("http://127.0.0.1:5050/ionic/nav").subscribe((res: any) => {
       var row=res
@@ -31,22 +32,18 @@ export class Tab2Page {
         r.more=true
       }
       this.list = row
-      console.log(this.list)
     })
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=1").subscribe((res: any) => {
       this.list1=res
     })
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=2").subscribe((res: any) => {
-    this.list2=res
+      this.list2=res
     })
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=3").subscribe((res: any) => {
-    this.list3=res
+      this.list3=res
     })
-    this.http.get("http://127.0.0.1:5050/ionic/recphone").subscribe((res:any)=>{
-      this.phone=res
-    })
-    this.http.get("http://127.0.0.1:5050/ionic/card").subscribe((res:any)=>{
-    this.card=res
+    this.http.get("http://127.0.0.1:5050/ionic/rec?list=4").subscribe((res: any) => {
+      this.list4=res
     })
   }
 }
