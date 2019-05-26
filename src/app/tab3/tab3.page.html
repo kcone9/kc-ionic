@@ -17,10 +17,44 @@
           </span></p>
         <p>
           <span>我要提额 <ion-icon name="arrow-forward"></ion-icon></span>
-          <span><ion-icon name="card" class="fir"></ion-icon>升级乐黑卡每年省3625元<ion-icon name="arrow-forward" class="la"></ion-icon></span>
+          <span>
+            <ion-icon name="card" class="fir"></ion-icon>升级乐黑卡每年省3625元<ion-icon name="arrow-forward" class="la">
+            </ion-icon>
+          </span>
         </p>
       </div>
     </div>
+    <div>
+      <p><span>5月代还账目</span><span>￥0</span></p>
+      <p>每月18日前还款</p>
+    </div>
+  </div>
+  <hr class="g">
+  <div class="lapp">
+    <div>乐卡应用</div>
+    <div>
+      <div *ngFor="let item of lapp">
+        <ion-img [src]="item.src"></ion-img>
+        <p>{{item.title}}</p><span>{{item.pro}}</span>
+      </div>
+    </div>
+    <div>
+      <ion-img></ion-img> 乐借 持牌金融机构放款，额外可借1-20万
+    </div>
+  </div>
+  <hr class="g">
+  <div class="qu">
     <div></div>
+    <div></div>
+  </div>
+  <div class="yao">
+
+  </div>
+  <div class="gol">
+    <div></div>
+    <div>
+      <p><span></span><span></span><button></button></p>
+      <p><ion-img></ion-img></p>
+    </div>
   </div>
 </ion-content>
