@@ -26,7 +26,8 @@
     </div>
     <div>
       <p><span>5月代还账目</span><span>￥0</span></p>
-      <p>每月18日前还款</p>
+      <p>每月18日前还款<ion-icon name="arrow-forward"></ion-icon>
+      </p>
     </div>
   </div>
   <hr class="g">
@@ -34,18 +35,27 @@
     <div>乐卡应用</div>
     <div>
       <div *ngFor="let item of lapp">
-        <ion-img [src]="item.src"></ion-img>
-        <p>{{item.title}}</p><span>{{item.pro}}</span>
+        <ion-img [src]="item.src" [class.active]="item.act"></ion-img>
+        <p [class.font]="item.font">{{item.title}}</p><span [class.font]="item.font">{{item.pro}}</span>
       </div>
     </div>
     <div>
-      <ion-img></ion-img> 乐借 持牌金融机构放款，额外可借1-20万
+      <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/31/DD/jagHAFrr-tCAYmNiAAABWrWCpLM201.png"></ion-img>
+      <p>乐借</p><span>持牌金融机构放款，额外可借1-20万</span>
     </div>
   </div>
   <hr class="g">
   <div class="qu">
-    <div></div>
-    <div></div>
+    <div>权益卡</div>
+    <div>
+      <p>
+        <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/06/06/j6gHAFzANryAYEBLAAFp_7oaG3g371.png"></ion-img>
+      </p>
+      <p><span>观影乐卡</span>
+        <span>每月3折充 <ion-img src="https://cimg1.fenqile.com/ibanner2/M00/37/90/jqgHAFzANqqAAFPXAAAwgPixYgk384.png"></ion-img></span>
+        <span>每月免费领20元猫眼电影券</span></p>
+      <p><ion-button size="small">去开通</ion-button></p>
+    </div>
   </div>
   <div class="yao">
 
@@ -54,7 +64,9 @@
     <div></div>
     <div>
       <p><span></span><span></span><button></button></p>
-      <p><ion-img></ion-img></p>
+      <p>
+        <ion-img></ion-img>
+      </p>
     </div>
   </div>
 </ion-content>

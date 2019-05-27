@@ -10,8 +10,14 @@ export class Tab3Page {
   lapp=[]
   ngOnInit(){
     this.http.get("http://127.0.0.1:5050/ionic/lapp?list=1").subscribe((res:any)=>{
-      console.log(res)
-      this.lapp=res
+      var row=res;
+      for(var r of row){
+        r.act=false
+        r.font=false
+      }
+      row.push({src: "", title: "更多产品", pro: "敬请期待",act:true,font:true})
+      console.log(row)
+      this.lapp=row
     })
   }
 }
