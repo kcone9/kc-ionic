@@ -1,9 +1,142 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
-  </ion-toolbar>
+<ion-header class="close-head">
+  <span>信用卡</span>
+  <p>
+    <ion-img src="https://cimg1.fenqile.com/product3/M00/9E/AE/RbQHAFxuDaCAI5vBAAAKMXFBPyE144.png"></ion-img>
+  </p>
 </ion-header>
-
 <ion-content>
-
+  <div class="card">
+    <p>用乐卡还信用卡</p>
+    <span>信用卡额度立即恢复 轻松不逾期</span>
+    <ion-button size="small">
+      <ion-icon name="add"></ion-icon>添加信用卡
+    </ion-button>
+  </div>
+  <div class="le">
+    <div>
+      <ion-img src="//cimg1.fenqile.com/product3/M00/08/B9/RrQHAFr5MpSAElClAAAnvR1yHO4766.png"></ion-img>
+      <div>
+        <p>乐卡还信用卡</p><span>最高可分36期</span>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <ion-img src="//cimg1.fenqile.com/product3/M00/08/B9/RrQHAFr5MqCARSonAAAsMXbYCeE496.png"></ion-img>
+      <div>
+        <p>微信还信用卡</p><span>零手续费</span>
+      </div>
+    </div>
+  </div>
+  <div class="img">
+    <ion-img src="//cimg1.fenqile.com/product4/M00/11/2C/gsMHAFzmWLWAaCGpAAB_D_nYPT0491.png"></ion-img>
+  </div>
+  <div class="rec">
+    <div>
+      <p>今日推荐</p>
+      <p>查看更多 <ion-icon name="arrow-forward"></ion-icon>
+      </p>
+    </div>
+    <div>
+      <ion-slides autoplay=1000 loop pager speed=1500>
+        <ion-slide class="slide">
+          <div>
+            <ion-img src="https://cimgs1.fenqile.com/product3/M00/01/DD/RbQHAFrMqJ-AIkoBAAOkiBp0XAQ799_384x240.png">
+            </ion-img>
+            <p>888分期乐大礼包</p><span>招行分期乐白领联名卡</span>
+          </div>
+          <div>
+            <ion-img src="//cimgs1.fenqile.com/product/M00/E2/B6/hhoGAFqnPOuAMcKHAAHt3Xtf4_U012_384x240.png"></ion-img>
+            <p>达标送6月腾讯会员</p><span>招行腾讯视频卡</span>
+          </div>
+          <div>
+            <ion-img src="//cimgs1.fenqile.com/product/M00/E2/B6/hhoGAFqnPPmAYFglAAGoWWRyukI000_384x240.png"></ion-img>
+            <p>首刷领新秀丽旅行神包</p><span>招行Visa全币卡</span>
+          </div>
+        </ion-slide>
+        <ion-slide class="slide">
+          <div>
+            <ion-img src="//cimgs1.fenqile.com/product/M00/D1/64/hhoGAFozd4KAIDEeAADwYonyojQ465_384x240.png"></ion-img>
+            <p>送899元阿尔卑斯拉杆箱</p><span>招行YOUNG卡</span>
+          </div>
+          <div>
+            <ion-img src="//cimgs1.fenqile.com/product/M00/ED/16/hRoGAFqVArCACTo5AANGO49mh_g592_384x240.png"></ion-img>
+            <p>送780元新秀丽双肩背包</p><span>招行王者荣耀卡</span>
+          </div>
+          <div>
+            <ion-img src="//cimgs1.fenqile.com/product3/M00/7F/0E/RbQHAFvFwySAN4LYAAMjtJf9JIA690_384x240.png"></ion-img>
+            <p>送膳魔师榨汁机</p><span>交通银行Y-POWER卡</span>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="theme">
+    <div>主题精选</div>
+    <div>
+      <div>
+        <p>高额度信用卡</p><span>均超2万</span>
+        <ion-img src="https://cimg1.fenqile.com/product3/M00/82/14/R7QHAFvlAFuAVxPaAAB5sZrsLHI554.png"></ion-img>
+      </div>
+      <div>
+        <div>
+          <div>
+            <p>通过率全网最高</p><span>最易下的信用卡</span>
+          </div>
+          <ion-img src="https://cimg1.fenqile.com/product3/M00/94/8E/RrQHAFvrycOAAMSBAAChGJJHAMc512.png"></ion-img>
+        </div>
+        <div>
+          <div>
+            <p>审批速度Top5</p><span>3秒批卡</span>
+          </div>
+          <ion-img src="https://cimg1.fenqile.com/product3/M00/83/75/RbQHAFvILfWAIVmRAAA5Yj8PhpQ400.png"></ion-img>
+        </div>
+        <div>
+          <div>
+            <p>第一张信用卡</p><span>新手办卡</span>
+          </div>
+          <ion-img src="https://cimg1.fenqile.com/product3/M00/83/12/RrQHAFvILgaAMvvnAABF1d8rd2M492.png"></ion-img>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="more">
+    <p>办卡进度</p>
+    <ion-icon name="arrow-forward"></ion-icon>
+  </div>
+  <hr class="hr">
+  <div class="hot">
+    <div>热门银行</div>
+    <div>
+      <div *ngFor="let item of hot;let i=index">
+        <ion-img [src]="item.src"></ion-img>
+        <p>{{item.title}}</p><span>{{item.pro}}</span>
+        <div [class.active]="item.ba">{{item.bar}}</div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="rank">
+    <div>进7天申卡排行榜</div>
+    <div>
+      <div *ngFor="let item of rank">
+        <div><p [class.no]="item.no"><span [class.active]="item.no==true?true:false">no.</span>{{item.id}}</p></div>
+        <div>
+          <ion-img [src]="item.src"></ion-img>
+        </div>
+        <div>
+          <p>{{item.title}}</p><span>{{item.pro}}</span><span>{{item.ass}}</span>
+        </div>
+        <div class="last">
+          <ion-button size="small" fill="outline">立即申请</ion-button>
+          <p>已有<span>{{item.num}}</span>申请</p>
+        </div>
+        <hr [class.active]="item.hr">
+      </div>
+    </div>
+  </div>
+  <div class="pri">
+    <ion-img src="//cimg1.fenqile.com/product4/M00/11/2C/gsMHAFzmWLWAaCGpAAB_D_nYPT0491.png"></ion-img>
+  </div>
 </ion-content>

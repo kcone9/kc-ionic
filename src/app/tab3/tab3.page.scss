@@ -3,11 +3,9 @@
     height: 0;
     background-color: transparent;
 }
-
 ::-webkit-scrollbar-track {
     background-color: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
@@ -16,9 +14,6 @@
     padding:0;
     text-decoration:none;
     box-sizing:border-box;
-}
-#box{
-    box-shadow:none;
 }
 .close-head {
     box-shadow: none;
@@ -42,7 +37,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .close-head>p {
     position: absolute;
     right: 3%;
@@ -65,7 +59,6 @@
     height:100%;
     background-image:url(https://cres1.fenqile.cn/web_vip_m/img/lecard/lc_bg_v2--f9e2947091.png);
     background-repeat:round;
-    
 }
 .balance>div:first-child>div>p{
     width:100%;
