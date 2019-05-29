@@ -14,6 +14,9 @@ export class Tab1Page {
    m:any="0";
    s:any="0"
   time=null
+  search(e){
+    console.log(233)
+  }
   ngOnInit(){
     this.http.get("http://127.0.0.1:5050/ionic/scroll").subscribe((res:any)=>{
       var row=res.reg

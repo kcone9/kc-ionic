@@ -1,10 +1,10 @@
 <ion-header class="close-head">
   <div>
     <ion-icon name="search" class="myicon" style="color:#fff;"></ion-icon>
-    <ion-input></ion-input>
+    <ion-input (click)="search()"></ion-input>
   </div>
   <div>
-    <ion-icon name="cart" style="color:#fff"></ion-icon>
+    <ion-icon name="cart" style="color:#fff" (click)="search($event)"></ion-icon>
   </div>
 </ion-header>
 <ion-content>

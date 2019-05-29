@@ -1,9 +1,98 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>tab5</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="header">
+    <div>
+      <div>设置</div>
+      <ion-icon name="mail"></ion-icon>
+    </div>
+    <div>
+      <div>
+        <div>
+          <ion-img class="head" src="http://127.0.0.1:5050/ionic/header/myhead.png">
+          </ion-img>
+          <ion-img class="go" src="http://cres.fenqile.cn/mobile/img/app/wallet_index/badge_safe.png"></ion-img>
+        </div>
+      </div>
+      <div>用户名</div>
+      <div><span>
+          <ion-icon name="card"></ion-icon>
+        </span>
+        <span>最高可消费22000元</span>
+        <span>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </span></div>
+    </div>
+    <div>
+      <div *ngFor="let item of list;let i=index">
+        <p>{{item.title}}</p>
+        <p>{{item.n}}</p>
+        <hr [class.active]="item.hr">
+      </div>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="bill">
+    <div>
+      <p>
+        <ion-icon name="book"></ion-icon>本月账单
+      </p>
+      <p>全部<ion-icon name="arrow-forward"></ion-icon>
+      </p>
+    </div>
+    <div>
+      <p><span>0.00</span><span>本月账单已还清</span></p>
+      <p><span>0</span><span>消费笔数</span></p>
+      <p><span>剩余<span>20</span>天</span><span>还款日</span></p>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="order">
+    <div>
+      <p>
+        <ion-icon name="clipboard"></ion-icon>我的订单
+      </p>
+      <p>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </p>
+    </div>
+    <div>
+      <p><span></span><span>代付款</span></p>
+      <p><span></span><span>待审核</span></p>
+      <p><span></span><span>待收货</span></p>
+      <p><span></span><span>待评价</span></p>
+    </div>
+  </div>
+  <hr class="hr">
+  <ul class="list">
+    <li *ngFor="let item of six;let i=index">
+      <div>
+        <ion-img [src]="item.src"></ion-img>
+        <p>{{item.title}}</p>
+      </div>
+      <div>
+        <p>{{item.hid}}</p>
+        <ion-icon name="arrow-forward"></ion-icon>
+      </div>
+    </li>
+  </ul>
+  <hr class="hr">
+  <ion-slides mode="ios" pager autoplay="2000" loop  speed="1500">
+    <ion-slide class="slide">
+      <div *ngFor="let item of slide.list1;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+    <ion-slide class="slide">
+      <div *ngFor="let item of slide.list2;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+    <ion-slide class="slide">
+        <div *ngFor="let item of slide.list3;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+    <ion-slide class="slide">
+        <div *ngFor="let item of slide.list4;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+    <ion-slide class="slide">
+        <div *ngFor="let item of slide.list5;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+    <ion-slide class="slide">
+        <div *ngFor="let item of slide.list6;let i=index"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span>{{item.pro}}</span></div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
