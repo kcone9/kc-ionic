@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import {HttpClient} from "@angular/common/http"
+import {NavController} from "@ionic/angular"
 // import { runInThisContext } from 'vm';
+import {IndexPage} from "../index/index.page"
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  constructor(private http:HttpClient){}
+  constructor(private http:HttpClient,public navCtrl:NavController){}
   user="kcone"
   scroll = []
    h:any="2"
@@ -15,7 +17,7 @@ export class Tab1Page {
    s:any="0"
   time=null
   search(e){
-    console.log(233)
+    // this.navCtrl.push(IndexPage)
   }
   ngOnInit(){
     this.http.get("http://127.0.0.1:5050/ionic/scroll").subscribe((res:any)=>{
