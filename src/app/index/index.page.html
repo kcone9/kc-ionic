@@ -1,7 +1,22 @@
-<ion-header class="header" >
-  
+<ion-header class="header">
+    <div>
+        <ion-icon name="arrow-back" (click)="back()"></ion-icon>
+    </div>
+    <div>
+        <ion-img src="https://cres1.fenqile.cn/fenqile_m/img/app/search/search_new_icon--4a0c49f08b.png"></ion-img>
+        <ion-input clearInput placeholder="电脑焕新机 最高18期免息"></ion-input>
+    </div>
+    <div>
+        <ion-button size="small">搜索</ion-button>
+    </div>
 </ion-header>
-
 <ion-content>
-<div>这是主页</div>
+    <div class="record">
+        <div><p>热门搜索</p><ion-img src="https://cres2.fenqile.cn/fenqile_m/img/app/search/refresh--ec6ad1e079.png"></ion-img></div>
+        <div><div *ngFor="let item of record;let i=index" [class.red]="item.red">{{item.title}}</div></div>
+    </div>
+    <div class="record">
+        <div><p>历史记录</p><ion-img src="https://cres2.fenqile.cn/fenqile_m/img/app/search/del--67e9e8ec5b.png"></ion-img></div>
+        <div><div *ngFor="let item of his;let i=index">{{item}}</div></div>
+    </div>
 </ion-content>

@@ -8,6 +8,21 @@
   box-sizing:border-box;
   text-decoration:none;
 }
+::-webkit-scrollbar 
+{ 
+    width: 0; 
+    height: 0; 
+    background-color: transparent; 
+} 
+
+::-webkit-scrollbar-track 
+{ 
+    background-color: transparent; 
+} 
+::-webkit-scrollbar-thumb 
+{ 
+    background-color: transparent; 
+}
 .close-head{
   box-shadow:none;
   height:44px;
@@ -16,7 +31,6 @@
   display:flex;
   align-items:center;
   background-image:url(https://cimgs1.fenqile.com/ibanner2/M00/38/82/jagHAFzZUliAEZDmAAAWaPqwYKk341_750x184.jpg);
-  box-sizing:border-box;
 }
 .close-head::after{
   box-shadow:none;
@@ -108,7 +122,6 @@
   height:172px;
   border-radius:6px;
   padding:2px 0;
-  // border:1px solid red;
 }
 .slides-l ion-slide ion-img img{
   border-radius:6px;
@@ -208,4 +221,104 @@
   width:80%;
   height:80px;
 }
+hr{
+  width:100%;
+  height:10px;
+  background-color:#f5f7f6;
+}
+.car{
+  width:100%;
+  height:280px;
+  display:flex;
+  flex-direction:column;
+}
+.car>div{
+  width:100%;
+  height:20%;
+  padding:0 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.car>div>p:first-child{
+  color:#25324e;
+  font-size:16px;
+  font-weight:500;
+}
+.car>div>p:last-child{
+  font-size:14px;
+  color:#B9BDC6;
+  display:flex;
+  align-items:center;
+}
+.car>.first{
+  width:100%;
+  height:60px;
+  margin-bottom:10px;
+  padding:0 10px;
+  list-style:none;
+  display:-webkit-box;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.car>.first>li{
+  width:25%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.car>.first>li>ion-img{
+  width:80px;
+  height:100%;
+  padding:0 2px;
+}
+.car>.first>li>.back{
+  background-color:#f7f9fa;
+}
+.car>ul:last-child{
+  width:100%;
+  height:45%;
+  padding:0 10px;
+  list-style:none;
+  display:-webkit-box;
+  overflow-y:hidden;
+  overflow-x:scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.car>ul:last-child>li{
+  width:30%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.car>ul:last-child>li>ion-img{
+  width:78px;
+  height:52px;
+}
+.car>ul:last-child>li>p{
+  width:100%;
+  height:17px;
+  color:#fe4979;
+  font-size:13px;
+  font-weight:500;
+}
+.car>ul:last-child>li>.first{
+  font-size:12px;
+  color:#737c8e;
+}
+.car>ul:last-child>li>span,.car>ul:last-child>li>p{
+  display:block;
+  width:100%;
+  text-align:center;
+}
+.car>ul:last-child>li>span:last-child{
+  font-size:10px;
+  margin-top:8px;
+  color:#969daa;
+}
+
 

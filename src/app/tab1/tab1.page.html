@@ -108,6 +108,7 @@
       <ion-img src="https://cimgs1.fenqile.com/ibanner2/M00/37/B5/jqgHAFzdB9iAcygpAAAv7dAMiyI865_344x144.png"></ion-img>
     </li>
   </ul>
+  <hr>
   <ion-grid>
     <ion-row class="amo">
       <ion-col>乐疯抢</ion-col>
@@ -124,5 +125,14 @@
       </ul>
     </ion-row>
   </ion-grid>
-
+  <hr>
+  <div class="car">
+    <div><p>汽车分期</p><p>更多车型 <ion-icon name="arrow-forward"></ion-icon></p></div>
+    <ul class="first" ><li *ngFor="let item of car;let i=index" (click)="back(i)"><ion-img [src]="item.src" [class.back]="item.back"></ion-img></li></ul>
+    <ul><li *ngFor="let item of cars"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span class="first">{{item.pro}}</span><span>{{item.logo}}</span></li></ul>
+  </div>
+  <hr>
+  <div class="phone">
+    
+  </div>
 </ion-content>
