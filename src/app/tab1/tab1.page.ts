@@ -20,6 +20,9 @@ export class Tab1Page {
   car=[]
   cars=[]
   carall=[]
+  phone=[]
+  phones=[]
+  phoneall=[]
   search(e){
     this.router.navigate(["/index"])
   }
@@ -35,6 +38,19 @@ export class Tab1Page {
     }
     this.cars=row
     this.car[i].back=true
+  }
+  backp(i){
+    for(var r of this.phone){
+        r.back=false
+    }
+    this.phone[i].back=true
+    var row=[]
+    for(var r of this.phoneall){
+      if(r.pid==(i+1)){
+        row.push(r)
+      }
+    }
+    this.phones=row
   }
   ngOnInit(){
     this.http.get("http://127.0.0.1:5050/ionic/scroll").subscribe((res:any)=>{
@@ -59,6 +75,28 @@ export class Tab1Page {
         }
       }
       this.cars=row;
+    })
+    this.http.get("http://127.0.0.1:5050/ionic/rec?list=13").subscribe((res:any)=>{
+      for(var r of res.a){
+        r.back=false
+        if(r.pid==1){
+          r.back=true
+        }
+      }
+      this.phone=res.a
+      var row=[]
+      for(var r of res.s){
+        r.back=false
+        
+      }
+      for(var r of res.s){
+        if(r.pid==1){
+          row.push(r)
+        }
+      }
+      this.phoneall=res.s
+      console.log(row)
+      this.phones=row
     })
     this.time=setInterval(()=>{
       this.s=parseInt(this.s)

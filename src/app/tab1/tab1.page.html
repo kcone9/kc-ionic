@@ -127,12 +127,49 @@
   </ion-grid>
   <hr>
   <div class="car">
-    <div><p>汽车分期</p><p>更多车型 <ion-icon name="arrow-forward"></ion-icon></p></div>
-    <ul class="first" ><li *ngFor="let item of car;let i=index" (click)="back(i)"><ion-img [src]="item.src" [class.back]="item.back"></ion-img></li></ul>
-    <ul><li *ngFor="let item of cars"><ion-img [src]="item.src"></ion-img><p>{{item.title}}</p><span class="first">{{item.pro}}</span><span>{{item.logo}}</span></li></ul>
+    <div>
+      <p>汽车分期</p>
+      <p>更多车型 <ion-icon name="arrow-forward"></ion-icon>
+      </p>
+    </div>
+    <ul class="first">
+      <li *ngFor="let item of car;let i=index" (click)="back(i)">
+        <ion-img [src]="item.src" [class.back]="item.back"></ion-img>
+      </li>
+    </ul>
+    <ul>
+      <li *ngFor="let item of cars">
+        <ion-img [src]="item.src"></ion-img>
+        <p>{{item.title}}</p><span class="first">{{item.pro}}</span><span>{{item.logo}}</span>
+      </li>
+    </ul>
   </div>
   <hr>
   <div class="phone">
-    
+    <div>
+      <p>精品分期</p>
+    </div>
+    <div class="last">
+      <div *ngFor="let item of phone;let i=index">
+        <ion-img [src]="item.src" [class.back]="item.back" (click)="backp(i)"></ion-img>
+        <div class="bor"></div>
+      </div>
+    </div>
+    <ul>
+      <li *ngFor="let item of phones">
+        <div>
+          <ion-img [src]="item.src"></ion-img>
+          <div class="back" [class.active]="item.make==''?true:false">{{item.make}}</div>
+        </div>
+        <div>
+          <p>{{item.title}}</p>
+          <p><span [class.active]="item.red1==''?true:false">{{item.red1}}</span><span
+              [class.active]="item.red2==''?true:false">{{item.red2}}</span><span
+              [class.active]="item.red3==''?true:false">{{item.red3}}</span></p>
+          <p><span>{{item.pro}}</span><span>{{item.pros}}</span></p>
+          <p><span>{{item.date}}</span>{{item.dates}}</p>
+        </div>
+      </li>
+    </ul>
   </div>
 </ion-content>
