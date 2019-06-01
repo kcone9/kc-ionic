@@ -64,6 +64,9 @@
     right:-4px;
     bottom:0;
 }
+.header>div:nth-child(2)>div .active{
+    display:none;
+}
 .header>div:nth-child(2)>div:nth-child(2){
     color:#fff;
     font-size:14px;

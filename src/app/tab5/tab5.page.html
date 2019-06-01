@@ -7,12 +7,12 @@
     <div>
       <div>
         <div>
-          <ion-img class="head" src="http://127.0.0.1:5050/ionic/header/myhead.png">
+          <ion-img class="head" [src]="login[2]">
           </ion-img>
-          <ion-img class="go" src="http://cres.fenqile.cn/mobile/img/app/wallet_index/badge_safe.png"></ion-img>
+          <ion-img class="go" src="http://cres.fenqile.cn/mobile/img/app/wallet_index/badge_safe.png" [class.active]="login[0]==0?true:false"></ion-img>
         </div>
       </div>
-      <div>用户名</div>
+      <div>{{login[1]}}</div>
       <div><span>
           <ion-icon name="card"></ion-icon>
         </span>

@@ -10,12 +10,22 @@ export class Tab5Page implements OnInit {
   list = []
   six = []
   slide = {}
+  login=[0,"","https://mall.m.fenqile.com/res/img/app/wallet_index/avt_default1.png"]
   ngOnInit() {
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=7").subscribe((res: any) => {
       var row = res
       row[0].hr = false;
       row[1].hr = true
       this.list = row
+    })
+    this.http.get("http://127.0.0.1:5050/user/islogin").subscribe((res:any)=>{
+      if(res.code==1){
+        this.login[1]=res.data[1]
+        this.login[0]=res.data[0]
+        this.login[2]=res.data[2]
+      }else if(res.code==0){
+        this.login[1]="立即登录"
+      }
     })
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=8").subscribe((res: any) => {
       this.six = res
