@@ -11,6 +11,9 @@ export class Tab4Page implements OnInit {
   card=[]
   hot=[]
   rank=[]
+  back(){
+    history.back()
+  }
   ngOnInit() {
     this.http.get("http://127.0.0.1:5050/ionic/lapp?list=3").subscribe((res:any)=>{
       this.card=res

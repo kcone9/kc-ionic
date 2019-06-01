@@ -12,7 +12,7 @@
           <ion-img class="go" src="http://cres.fenqile.cn/mobile/img/app/wallet_index/badge_safe.png" [class.active]="login[0]==0?true:false"></ion-img>
         </div>
       </div>
-      <div>{{login[1]}}</div>
+      <div (click)="loginjump(login[1])">{{login[1]}}</div>
       <div><span>
           <ion-icon name="card"></ion-icon>
         </span>

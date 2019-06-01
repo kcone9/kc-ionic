@@ -1,0 +1,24 @@
+<ion-header class="close-head">
+  <p>{{user}}</p><ion-icon name="arrow-back" class="back" (click)="back($event)"></ion-icon>
+</ion-header>
+<ion-content>
+  <div class="logo">
+  </div>
+  <div class="main">
+    <div>
+      <p ></p>
+      <ion-input placeholder="输入手机号" (keyup)="username($event)"></ion-input>
+    </div>
+    <div>
+      <p></p>
+      <ion-input [placeholder]="ver" (keyup)="password($event)" type="password"></ion-input><span>{{phone}}</span>
+    </div>
+      <ion-button expand="block" (click)="confirm($event)">{{btn}}</ion-button>
+    <div>
+      <div>点击以上按钮即代表你已阅读并同意</div>
+      <div><a>用户注册协议、</a><a>隐私保护政策</a></div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="footer" (click)="switch($event)">{{footer}}
+</ion-footer>

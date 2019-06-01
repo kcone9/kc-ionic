@@ -63,31 +63,17 @@ export class Tab1Page {
     this.phones=row
   }
   loaddata(e){
-    console.log(233)
     setTimeout(()=>{
       this.page=this.page+1
-      console.log(this.page)
       this.http.get("http://127.0.0.1:5050/ionic/rec?list=14&page="+this.page).subscribe((res:any)=>{
         if(res!=[]){
-          console.log("有",res)
           this.more=this.more.concat(res)
-          console.log(this.more)
           e.target.complete()
         }else{
-          console.log("无")
           e.target.disabled=true
         }
       })
     },1000)
-  }
-  textload(e){
-    console.log("测试已触发")
-    var n=this.text.length
-    for(var i=n;i<n-1+10;i++){
-      this.text.push(i)
-    }
-    e.target.complete()
-    console.log(this.text)
   }
   ngOnInit(){
     this.http.get("http://127.0.0.1:5050/ionic/scroll").subscribe((res:any)=>{

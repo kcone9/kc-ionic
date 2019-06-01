@@ -1,0 +1,121 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+*{
+    margin:0;
+    padding:0;
+    text-decoration:none;
+    box-sizing:border-box;
+}
+.close-head {
+    box-shadow: none;
+    height: 44px;
+    padding: 4px 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(59, 155, 255);
+    position:relative;
+}
+.close-head>.back{
+    position:absolute;
+    width:24px;
+    height:24px;
+    top:20%;
+    left:3%;
+    color:#fff;
+}
+.close-head>p{
+    width:100%;
+    text-align:center;
+    color:#fff;
+    font-size:18px;
+    font-weight:400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.close-head::after{
+    box-shadow:none;
+}
+.logo{
+    width:100%;
+    height:170px;
+    background:url(https://cres1.fenqile.cn/passport/online/img/68e05730d3e8de226f3fcf3da648dcc6.png) 50%/auto 70px no-repeat #3b9bff;
+}
+.main{
+    width:100%;
+    padding-top:4%;
+}
+.main>div{
+    width:100%;
+    height:48px;
+    padding:2px 2%;
+    display:flex;
+    align-items:center;
+}
+.main>div:first-child>p,.main>div:nth-child(2)>p{
+    width:22px;
+    height:22px;
+    margin-right:16px;
+    background: url(https://cres1.fenqile.cn/passport/online/img/a090da31b2bbd112466936e49455f41d.png) no-repeat;
+}
+.main>div:first-child>p{
+    background-position:0 -24px;
+    background-size: 50px auto;
+}
+.main>div:nth-child(2)>p{
+    background-position:-28px 0px;
+    background-size: 50px auto;
+}
+.main>div:first-child>ion-input,.main>div:nth-child(2)>ion-input{
+    font-size:14px;
+    color:#535c68;
+    height:100%;
+    // border:1px solid red;
+}
+.main>div:first-child>ion-input{
+    width:50%;
+}
+.main>div:nth-child(2)>ion-input{
+    width:30%;
+}
+.main>div:nth-child(2)>span{
+    font-size:14px;
+    color:#aaa;
+    padding:6px 8px;
+}
+.main>ion-button{
+    margin-top:6px;
+    margin-right:4%;
+    margin-left:4%;
+}
+.main>div:last-child>div{
+    font-size:12px;
+    margin-right:4px;
+}
+.main>div:last-child>div:first-child{
+    color:#757c8e;
+    
+}
+.main>div:last-child>div:last-child{
+    color:#3b9bff;
+}
+.footer{
+    width:100%;
+    height:56px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#3b9bff;
+    font-weight:700;
+}

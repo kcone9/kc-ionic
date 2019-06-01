@@ -1,16 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http"
+import { HttpClient } from "@angular/common/http";
+import {Router} from "@angular/router"
 @Component({
   selector: 'app-tab5',
   templateUrl: './tab5.page.html',
   styleUrls: ['./tab5.page.scss'],
 })
 export class Tab5Page implements OnInit {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ,private router:Router) { }
   list = []
   six = []
   slide = {}
   login=[0,"","https://mall.m.fenqile.com/res/img/app/wallet_index/avt_default1.png"]
+  loginjump(e){
+    if(e=='立即登录'){
+      this.router.navigate(["/login"])
+    }else{
+      
+    }
+  }
   ngOnInit() {
     this.http.get("http://127.0.0.1:5050/ionic/rec?list=7").subscribe((res: any) => {
       var row = res
