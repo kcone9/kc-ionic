@@ -172,4 +172,58 @@
       </li>
     </ul>
   </div>
+  <hr>
+  <div class="gift">
+    <div>
+      <p>送个好礼物</p>
+    </div>
+    <div>
+      <div *ngFor="let item of gift">
+        <ion-img [src]="item.src"></ion-img>
+      </div>
+    </div>
+    <ul>
+      <li *ngFor="let item of gifts;let i=index">
+        <div>
+          <ion-img [src]="item.src"></ion-img>
+        </div>
+        <div>
+          <p>{{item.title}}</p>
+          <p>{{item.pro}}</p>
+          <p><span>{{item.date}}</span>{{item.dates}}</p>
+          <p><span>
+              <ion-img [src]="item.img"></ion-img>{{item.liked}}
+            </span><span>{{item.work}}</span></p>
+        </div>
+      </li>
+    </ul>
+    <div class="last">
+      <p>查看更多</p>
+    </div>
+  </div>
+  <div class="rec">
+    <div>
+      <p>为你推荐</p>
+    </div>
+  </div>
+  <div class="infinite">
+    <div *ngFor="let item of more;let i=index" [class.bor]="i%2==0?true:false">
+      <div>
+        <ion-img [src]="item.src"></ion-img>
+        <ion-img class="back" [src]="item.back" [class.active]="item.back==''?true:false"></ion-img>
+      </div>
+      <div>
+        <p>{{item.title}}</p>
+        <p><span>{{item.pro}}</span><span>{{item.pros}}</span></p>
+        <p><span>{{item.date}}</span><span>{{item.dates}}</span></p>
+        <p><span [class.active]="item.red1==''?true:false">{{item.red1}}</span><span
+            [class.active]="item.red2==''?true:false">{{item.red2}}</span><span
+            [class.active]="item.red3==''?true:false">{{item.red3}}</span></p>
+      </div>
+    </div>
+  </div>
+  <ion-infinite-scroll (ionInfinite)="loaddata($event)" threshold="10%">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="正在加载">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
