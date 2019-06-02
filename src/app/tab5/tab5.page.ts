@@ -20,7 +20,7 @@ export class Tab5Page implements OnInit {
     }
   }
   ngOnInit() {
-    this.http.get("http://127.0.0.1:5050/ionic/rec?list=7").subscribe((res: any) => {
+    this.http.get("http://127.0.0.1:5050/ionic/rec?list=7",{withCredentials:true}).subscribe((res: any) => {
       var row = res
       row[0].hr = false;
       row[1].hr = true
@@ -60,8 +60,10 @@ export class Tab5Page implements OnInit {
           row.list6.push(res[i])
         }
       }
-      console.log(row)
       this.slide = row
+    })
+    this.http.get("http://127.0.0.1:5050/user/islogin").subscribe((res:any)=>{
+      console.log(res)
     })
   }
 

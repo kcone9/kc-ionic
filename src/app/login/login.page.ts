@@ -42,7 +42,6 @@ export class LoginPage implements OnInit {
   confirm(e:any){
     if(this.swit==true){
       if(this.name!="" || this.pass!=""){
-        console.log(this.name,this.pass)
         const httpOptions={
           headers:new HttpHeaders({
             "Content-Type":"application/x-www-form-urlencoded"
@@ -50,7 +49,6 @@ export class LoginPage implements OnInit {
           withCredentials:true 
         }
         this.http.post("http://127.0.0.1:5050/user/login",`name=${this.name}&pass=${this.pass}`,httpOptions).subscribe((res:any)=>{
-          console.log(res)
           if(res.code==1){
             this.toasts("登录成功")
             setTimeout(()=>{
